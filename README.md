@@ -498,6 +498,5 @@ limitations under the License.
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?logo=github)](https://github.com/ParminderSinghGithub/NoteShield)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-[⬆ Back to Top](#-noteshield---ai-powered-indian-currency-authentication-system)
 
 </div>
