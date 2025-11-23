@@ -22,15 +22,14 @@
 - [Live Demo](#-live-demo)
 - [Datasets](#-datasets)
 - [Notebooks](#-notebooks)
-- [System Architecture](#%EF%B8%8F-system-architecture)
+- [System Architecture](#-system-architecture)
 - [Technology Stack](#-technology-stack)
-- [Installation & Setup](#%EF%B8%8F-installation--setup)
+- [Installation & Setup](#-installation--setup)
 - [Usage Guide](#-usage-guide)
 - [Project Structure](#-project-structure)
 - [Model Performance](#-model-performance)
 - [Contributing](#-contributing)
 - [License](#-license)
-- [Acknowledgments](#-acknowledgments)
 
 ---
 
@@ -419,86 +418,22 @@ NoteShield/
 
 | Metric | Denomination | Authenticity |
 |--------|-------------|--------------|
-| **Accuracy** | 95.2% | 97.8% |
-| **Precision** | 94.8% | 97.5% |
-| **Recall** | 94.6% | 98.1% |
-| **F1-Score** | 94.7% | 97.8% |
-
-> **Note**: Replace with actual metrics from your trained model
-
-### 📊 **Per-Class Performance**
-
-| Denomination | Precision | Recall | F1-Score | Support |
-|-------------|-----------|---------|----------|---------|
-| ₹10 | XX.X% | XX.X% | XX.X% | XXX |
-| ₹20 | XX.X% | XX.X% | XX.X% | XXX |
-| ₹50 | XX.X% | XX.X% | XX.X% | XXX |
-| ₹100 | XX.X% | XX.X% | XX.X% | XXX |
-| ₹200 | XX.X% | XX.X% | XX.X% | XXX |
-| ₹500 | XX.X% | XX.X% | XX.X% | XXX |
-| ₹2000 | XX.X% | XX.X% | XX.X% | XXX |
-| **Counterfeit** | XX.X% | XX.X% | XX.X% | XXX |
+| **Accuracy** | 99.10% | 100.00% |
 
 ### 🔍 **Test Set Statistics**
 
-- **Total Test Samples**: 1,992 images
-- **Genuine Notes**: X,XXX (XX.X%)
-- **Counterfeit Notes**: XXX (XX.X%)
-- **Test Accuracy**: XX.X%
+- **Total Test Samples**: 1,990 images
+- **Genuine Notes**: 1,920 (96.48%)
+- **Counterfeit Notes**: 70 (3.52%)
 
----
+### 📊 **Confusion Matrices & Performance Visualizations**
 
-## ⚠️ Limitations
+The model's detailed performance can be visualized through confusion matrices and evaluation curves available in the `results/` directory:
 
-### **Current Constraints**
-
-1. **DSV Features**: Currently simulated for demonstration purposes; production deployment requires implementing actual watermark detection, seal verification, and serial number OCR algorithms.
-
-2. **Image Quality Dependency**: 
-   - Optimal performance requires good lighting conditions
-   - Recommended resolution: 224×224 or higher
-   - Avoid blurry, tilted, or partially visible notes
-
-3. **Research Prototype**: 
-   - Designed for educational and research purposes
-   - Not a replacement for official RBI verification methods
-   - Should not be used as the sole authentication method in production
-
-4. **Dataset Bias**: 
-   - Model performance depends on training data diversity
-   - May not generalize well to notes with unusual wear/tear
-   - Limited to Indian currency denominations in dataset
-
-5. **Computational Requirements**: 
-   - Requires ~332 MB model file in memory
-   - GPU recommended for batch processing
-   - Real-time webcam processing may be slower on CPU-only systems
-
----
-
-## 🚀 Future Enhancements
-
-### **Planned Features**
-
-- [ ] **Real DSV Implementation**: Actual watermark detection and seal verification algorithms
-- [ ] **Multi-Currency Support**: Extend to other currencies (USD, EUR, GBP, etc.)
-- [ ] **Mobile Application**: Native Android/iOS apps using TensorFlow Lite
-- [ ] **API Endpoints**: RESTful API for integration with other systems
-- [ ] **Database Integration**: Store authentication history and statistics
-- [ ] **Advanced Preprocessing**: Automatic note orientation correction and edge detection
-- [ ] **Model Quantization**: Compressed model for faster inference
-- [ ] **Ensemble Methods**: Multiple model voting for improved accuracy
-- [ ] **Temporal Tracking**: Video-based authentication for moving notes
-- [ ] **Anomaly Detection**: Identify unknown counterfeit patterns
-
-### **Technical Improvements**
-
-- [ ] Implement actual OCR for serial number extraction
-- [ ] Add support for worn/damaged note authentication
-- [ ] Integrate blockchain for authentication logging
-- [ ] Develop edge deployment optimizations
-- [ ] Add multi-language support for interface
-- [ ] Create comprehensive unit and integration tests
+- **Denomination Confusion Matrix**: `confusion_denom.png`
+- **Authenticity Confusion Matrix**: `confusion_auth.png`
+- **ROC Curve**: `roc_auth.png`
+- **Precision-Recall Curve**: `pr_auth.png`
 
 ---
 
@@ -534,92 +469,35 @@ Found a bug or have a suggestion? Please open an issue with:
 
 ## 📄 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **Apache License 2.0** - see the [LICENSE](LICENSE) file for details.
 
 ```
-MIT License
+Copyright 2025 Parminder Singh
 
-Copyright (c) 2025 Parminder Singh
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+    http://www.apache.org/licenses/LICENSE-2.0
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 ```
-
----
-
-## 🙏 Acknowledgments
-
-### **Special Thanks**
-
-- **TensorFlow Team** for the excellent deep learning framework
-- **Streamlit Team** for the intuitive web app framework
-- **Kaggle Community** for hosting datasets and notebooks
-- **MobileNetV2 Authors** for the efficient architecture
-- **OpenCV Contributors** for computer vision tools
-
-### **References**
-
-1. Sandler, M., et al. (2018). "MobileNetV2: Inverted Residuals and Linear Bottlenecks." *CVPR 2018*
-2. Reserve Bank of India - Security Features Documentation
-3. Kaggle Datasets - Indian Currency Recognition
-4. Streamlit Documentation - Building ML Web Apps
-
-### **Datasets & Resources**
-
-- Training data sourced from public Indian currency datasets
-- Preprocessing techniques inspired by computer vision literature
-- Feature extraction methods based on document security research
-
----
-
-## 📞 Contact & Support
-
-### **Get in Touch**
-
-- **GitHub**: [@ParminderSinghGithub](https://github.com/ParminderSinghGithub)
-- **Project Repository**: [NoteShield](https://github.com/ParminderSinghGithub/NoteShield)
-- **Issues**: [Report a Bug](https://github.com/ParminderSinghGithub/NoteShield/issues)
-
-### **Support the Project**
-
-If you find this project helpful, please consider:
-- ⭐ **Starring** the repository
-- 🍴 **Forking** for your own experiments
-- 📢 **Sharing** with others who might benefit
-- 🐛 **Reporting bugs** or suggesting features
-
----
-
-## 📊 Project Stats
-
-![GitHub Stars](https://img.shields.io/github/stars/ParminderSinghGithub/NoteShield?style=social)
-![GitHub Forks](https://img.shields.io/github/forks/ParminderSinghGithub/NoteShield?style=social)
-![GitHub Issues](https://img.shields.io/github/issues/ParminderSinghGithub/NoteShield)
-![GitHub License](https://img.shields.io/github/license/ParminderSinghGithub/NoteShield)
 
 ---
 
 <div align="center">
 
-### 🛡️ Built with ❤️ for Secure Currency Authentication
+### 🛡️ NoteShield - AI-Powered Currency Authentication
 
-**NoteShield** • *Protecting Trust, One Note at a Time*
+**Protecting Trust, One Note at a Time**
 
-[⬆ Back to Top](#%EF%B8%8F-noteshield---ai-powered-indian-currency-authentication-system)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?logo=github)](https://github.com/ParminderSinghGithub/NoteShield)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+
+[⬆ Back to Top](#-noteshield---ai-powered-indian-currency-authentication-system)
 
 </div>
