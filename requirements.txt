@@ -4,4 +4,4 @@ pandas>=1.5
 numpy>=1.23
 pillow>=9.5
 matplotlib>=3.7
-opencv-python>=4.8
+opencv-python-headless>=4.8
