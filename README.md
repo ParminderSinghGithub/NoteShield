@@ -313,7 +313,7 @@ results/final_artifacts/
 └── pr_auth.png                         # Precision-Recall curve
 ```
 
-> **Note**: If model files are missing, download them from the [Kaggle Notebook 4 output](YOUR_NOTEBOOK_4_LINK) or train the model using the provided notebooks.
+> **Note**: If model files are missing, download them from the [Kaggle Notebook 4 output](https://www.kaggle.com/code/parmindersingh2002/04-cnn-training-dual-head-and-visualization) or train the model using the provided notebooks.
 
 #### **5. Launch the Application**
 
