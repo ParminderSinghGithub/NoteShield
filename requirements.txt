@@ -1,0 +1,7 @@
+streamlit>=1.30
+tensorflow>=2.12
+pandas>=1.5
+numpy>=1.23
+pillow>=9.5
+matplotlib>=3.7
+opencv-python>=4.8
