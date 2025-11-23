@@ -4,14 +4,12 @@
 
 ![NoteShield Banner](https://img.shields.io/badge/NoteShield-Currency%20Authentication-blue?style=for-the-badge&logo=shield)
 
-[![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](YOUR_STREAMLIT_APP_LINK_HERE)
-[![Kaggle](https://img.shields.io/badge/Kaggle-Notebooks-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](YOUR_KAGGLE_PROFILE_LINK_HERE)
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://parmindersinghgithub-noteshield-main-bw7u2m.streamlit.app/)
+[![Kaggle](https://img.shields.io/badge/Kaggle-Notebooks-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/parmindersingh2002)
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.12+-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
 
 **Advanced AI system for authenticating Indian currency notes using deep learning and computer vision**
-
-[🚀 Live Demo](#-live-demo) • [📊 Datasets](#-datasets) • [📓 Notebooks](#-notebooks) • [🏗️ Architecture](#%EF%B8%8F-system-architecture) • [⚙️ Setup](#%EF%B8%8F-installation--setup)
 
 </div>
 
@@ -30,8 +28,6 @@
 - [Usage Guide](#-usage-guide)
 - [Project Structure](#-project-structure)
 - [Model Performance](#-model-performance)
-- [Limitations](#-limitations)
-- [Future Enhancements](#-future-enhancements)
 - [Contributing](#-contributing)
 - [License](#-license)
 - [Acknowledgments](#-acknowledgments)
@@ -53,11 +49,11 @@ The system provides real-time denomination classification and counterfeit detect
 ## ✨ Key Features
 
 ### 🔍 **Authentication Capabilities**
-- ✅ Real-time authentication via **webcam capture** or **image upload**
-- ✅ **8-class denomination recognition** (₹10, ₹20, ₹50, ₹100, ₹200, ₹500, ₹2000, Counterfeit)
-- ✅ **Binary authenticity classification** (Genuine/Fake) with confidence scores
-- ✅ **Batch processing** for multiple notes simultaneously
-- ✅ **Explainable AI** with visual analysis of model decisions
+-  Real-time authentication via **webcam capture** or **image upload**
+-  **8-class denomination recognition** (₹10, ₹20, ₹50, ₹100, ₹200, ₹500, ₹2000, Counterfeit)
+-  **Binary authenticity classification** (Genuine/Fake) with confidence scores
+-  **Batch processing** for multiple notes simultaneously
+-  **Explainable AI** with visual analysis of model decisions
 
 ### 🧠 **Advanced Technology**
 - 🎯 **Dual-Head MobileNetV2** architecture for denomination + authenticity
@@ -80,9 +76,8 @@ The system provides real-time denomination classification and counterfeit detect
 
 Experience NoteShield in action:
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](YOUR_STREAMLIT_APP_LINK_HERE)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://parmindersinghgithub-noteshield-main-bw7u2m.streamlit.app/)
 
-> **Note**: Replace `YOUR_STREAMLIT_APP_LINK_HERE` with your actual Streamlit deployment URL
 
 **Features Available in Demo:**
 - Single note authentication (upload or webcam)
@@ -99,10 +94,10 @@ All datasets are hosted on **Kaggle** for easy access and reproducibility.
 
 ### 📦 **Available Datasets**
 
-| Dataset Name | Description | Size | Kaggle Link |
-|-------------|-------------|------|-------------|
-| **NoteShield Dataset** | Raw Indian currency note images for training | ~XXX MB | [![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-20BEFF?logo=kaggle)](YOUR_NOTESHIELD_DATASET_LINK) |
-| **NoteShield Features** | Extracted DSV features and embeddings | ~XXX MB | [![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-20BEFF?logo=kaggle)](YOUR_NOTESHIELD_FEATURES_LINK) |
+| Dataset Name | Description | Kaggle Link |
+|-------------|-------------|-------------|
+| **NoteShield Dataset** | Raw Indian currency note images for training | [![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-20BEFF?logo=kaggle)](https://www.kaggle.com/datasets/parmindersingh2002/cvpr-mini-project-dataset) |
+| **NoteShield Features** | Extracted DSV features and embeddings | [![Kaggle](https://img.shields.io/badge/Kaggle-Dataset-20BEFF?logo=kaggle)](https://www.kaggle.com/datasets/parmindersingh2002/cvpr-mini-project-dsv-dataset) |
 
 ### 📝 **Dataset Structure**
 
@@ -121,9 +116,8 @@ NoteShield Dataset/
 └── test/
 
 NoteShield Features/
-├── dsv_features.csv
-├── cnn_embeddings.npy
-└── metadata.json
+└── dsv_features
+
 ```
 
 ---
@@ -138,10 +132,10 @@ Complete end-to-end pipeline implemented in **4 comprehensive Jupyter notebooks*
 
 | # | Notebook | Description | Kaggle Link | Required Inputs |
 |---|----------|-------------|-------------|----------------|
-| **1** | 📊 Data Preparation | Dataset exploration, class distribution analysis, train/val/test split | [![Open in Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?logo=kaggle)](YOUR_NOTEBOOK_1_LINK) | • NoteShield Dataset |
-| **2** | 🔧 Preprocessing | Image preprocessing, geometric warping, template matching (ORB/SIFT/AKAZE), homography transformations | [![Open in Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?logo=kaggle)](YOUR_NOTEBOOK_2_LINK) | • NoteShield Dataset |
-| **3** | 🧬 DSV Feature Extraction | Hybrid feature extraction: LBP, GLCM, FFT, edge detection, keypoints, MobileNetV2 embeddings | [![Open in Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?logo=kaggle)](YOUR_NOTEBOOK_3_LINK) | • NoteShield Dataset<br>• Notebook 2 (Preprocessing) |
-| **4** | 🤖 CNN Training & Evaluation | Dual-head MobileNetV2 training, model evaluation, confusion matrices, ROC/PR curves | [![Open in Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?logo=kaggle)](YOUR_NOTEBOOK_4_LINK) | • NoteShield Features Dataset<br>• Notebook 2 (Preprocessing) |
+| **1** | 📊 Data Preparation | Dataset exploration, class distribution analysis, train/val/test split | [![Open in Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?logo=kaggle)](https://www.kaggle.com/code/parmindersingh2002/1-data-preparation) | • NoteShield Dataset |
+| **2** | 🔧 Preprocessing | Image preprocessing, geometric warping, template matching (ORB/SIFT/AKAZE), homography transformations | [![Open in Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?logo=kaggle)](https://www.kaggle.com/code/parmindersingh2002/2-preprocessing) | • NoteShield Dataset |
+| **3** | 🧬 DSV Feature Extraction | Hybrid feature extraction: LBP, GLCM, FFT, edge detection, keypoints, MobileNetV2 embeddings | [![Open in Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?logo=kaggle)](https://www.kaggle.com/code/parmindersingh2002/03-dsv-feature-extraction-hybrid) | • NoteShield Dataset<br>• Notebook 2 (Preprocessing) |
+| **4** | 🤖 CNN Training & Evaluation | Dual-head MobileNetV2 training, model evaluation, confusion matrices, ROC/PR curves | [![Open in Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?logo=kaggle)](https://www.kaggle.com/code/parmindersingh2002/04-cnn-training-dual-head-and-visualization) | • NoteShield Features Dataset<br>• Notebook 2 (Preprocessing) |
 
 ### 📋 **Notebook Dependencies**
 
@@ -168,7 +162,7 @@ Notebook 4: CNN Training & Visualization
    - Click "Add Input" → Search for dataset names
    - For notebooks requiring previous notebooks, add them as inputs
 3. **Verify paths**: Check all file paths in the first few cells
-4. **Enable GPU**: Settings → Accelerator → GPU (for Notebook 4)
+4. **Enable GPU**: Settings → Accelerator → GPU (for Notebook 2, 3 and 4)
 5. **Run all cells**: Click "Run All" or execute cells sequentially
 
 ---
@@ -325,7 +319,7 @@ results/final_artifacts/
 #### **5. Launch the Application**
 
 ```bash
-streamlit run app.py
+streamlit run main.py
 ```
 
 The application will open automatically in your default browser at `http://localhost:8501`
@@ -394,7 +388,7 @@ The application will open automatically in your default browser at `http://local
 ```
 NoteShield/
 │
-├── app.py                          # Main Streamlit application
+├── main.py                          # Main Streamlit application
 ├── requirements.txt                # Python dependencies
 ├── README.md                       # Project documentation
 │
